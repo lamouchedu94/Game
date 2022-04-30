@@ -1,7 +1,7 @@
 import curses
 from curses import wrapper
 
-def afficher(carte,position) :
+def afficher(carte,position,point) :
     #Affiche la carte et attend une entrée pour la renvoyer
     def main(stdscr):
         stdscr.clear()
@@ -25,6 +25,7 @@ def afficher(carte,position) :
 
         stdscr.addstr(position[0]*-1,position[1],"$")
         stdscr.addstr(0,len(carte[0]),str(position))
+        stdscr.addstr(1,len(carte[0]),f'Vous avez : {str(point)} point(s)')
         stdscr.refresh()
         
         return stdscr.getkey() 

@@ -4,10 +4,10 @@ def mouvement(touche, position):
     position_avant = position
     try :
         if touche in touche_possible[0] :
-            if position[0] + touche_possible[0][touche] < 0 :
+            if position[0] + touche_possible[0][touche] <= 0 :
                 position[0] += touche_possible[0][touche] 
         else :
-            if position[1] + touche_possible[1][touche] > 0 :
+            if position[1] + touche_possible[1][touche] >= 0 :
                 position[1] += touche_possible[1][touche]
     except :
         pass
