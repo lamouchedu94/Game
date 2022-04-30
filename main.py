@@ -18,7 +18,6 @@ while True :
     if vertif_bonus(carte,position) :
         point += 1
     if point == int(sys.argv[4]) :
-        
         break
     
 
