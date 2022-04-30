@@ -22,7 +22,10 @@ def afficher(carte,position) :
                     stdscr.addstr(carte[i][j],curses.color_pair(2))        
             stdscr.addstr("\n")
             stdscr.refresh()
+
+        stdscr.addstr(position[0]*-1,position[1],"$")
         stdscr.addstr(0,len(carte[0]),str(position))
         stdscr.refresh()
+        
         return stdscr.getkey() 
     return(wrapper(main)) 
